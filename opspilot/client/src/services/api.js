@@ -1,4 +1,19 @@
-const API_BASE = import.meta.env.VITE_API_URL || '/api';
+const getApiBase = () => {
+  const envUrl = import.meta.env.VITE_API_URL;
+  if (envUrl && envUrl.trim() !== '') {
+    let clean = envUrl.trim().replace(/\/+$/, '');
+    if (clean.startsWith('http') && !clean.endsWith('/api')) {
+      clean = `${clean}/api`;
+    }
+    return clean;
+  }
+  if (import.meta.env.DEV) {
+    return '/api';
+  }
+  return 'https://enterprise-ai-c1ue.onrender.com/api';
+};
+
+export const API_BASE = getApiBase();
 
 export const request = async (endpoint, options = {}) => {
   const token = localStorage.getItem('opspilot_token');

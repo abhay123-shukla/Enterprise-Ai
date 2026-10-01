@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+*/node_modules/
+*/*/node_modules/
+
+# Environment variables & secrets (CRITICAL)
+.env
+.env.*
+!.env.example
+*.env
+*/*.env
+*/*/.env
+*/**/.env
+*/**/.env.*
+!*/**/.env.example
+
+# Build & distribution outputs
+dist/
+build/
+*/dist/
+*/build/
+*/**/dist/
+*/**/build/
+
+# Testing & coverage
+coverage/
+*/coverage/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+**/*.log
+
+# OS & IDE artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

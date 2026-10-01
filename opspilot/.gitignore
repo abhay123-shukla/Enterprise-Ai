@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Environment files & secrets (CRITICAL)
+.env
+.env.*
+!.env.example
+client/.env
+client/.env.*
+!client/.env.example
+server/.env
+server/.env.*
+!server/.env.example
+
+# Build & distribution outputs
+dist/
+client/dist/
+build/
+client/build/
+
+# Testing & coverage
+coverage/
+
+# Logs
+*.log
+**/*.log
+
+# OS & IDE artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

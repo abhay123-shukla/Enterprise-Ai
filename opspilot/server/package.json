@@ -1,0 +1,28 @@
+{
+  "name": "opspilot-server",
+  "version": "1.0.0",
+  "description": "OpsPilot Enterprise AI Service Operations Backend",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node src/utils/seed.js",
+    "test:security": "node test-security.js",
+    "test:e2e": "node test-e2e-flow.js",
+    "test": "node test-security.js && node test-e2e-flow.js"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^8.7.0",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.3.1",
+    "morgan": "^1.10.0",
+    "zod": "^3.22.4"
+  }
+}
